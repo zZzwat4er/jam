@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
 
     public void on_click()
     {
+        // При нажатии на кнопку "Начать игру", выключаем панель с меню
         main_menu.active = false;
     }
 }
