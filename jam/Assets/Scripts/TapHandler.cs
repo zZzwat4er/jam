@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class TapHandler : MonoBehaviour
 {
+    public GameObject menu_panel; //панель главного меню
     void FixedUpdate()
     {
+
+        if (menu_panel.active) return;
         if (Input.GetMouseButtonDown(0))
         {
             GameObject brick;
