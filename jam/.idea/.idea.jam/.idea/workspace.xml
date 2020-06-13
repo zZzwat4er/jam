@@ -21,7 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e65b782e-1cbd-437f-b246-7a5582059016" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.jam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.jam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BrickFall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BrickFall.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BrickInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BrickInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BrickMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BrickMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Score.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Score.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TapHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TapHandler.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,12 +45,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/BrickMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CreateBlock.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/TapHandler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Score.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/BrickInfo.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BrickFall.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BrickMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TapHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BrickInfo.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Score.cs" />
       </list>
     </option>
   </component>
@@ -58,6 +61,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -88,7 +92,7 @@
       <option name="presentableId" value="Default" />
       <updated>1591985679555</updated>
       <workItem from="1591985697417" duration="8597000" />
-      <workItem from="1592078061156" duration="5624000" />
+      <workItem from="1592078061156" duration="7118000" />
     </task>
     <servers />
   </component>

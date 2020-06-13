@@ -6,8 +6,10 @@ public class TapHandler : MonoBehaviour
 {
     void FixedUpdate()
     {
+        // отслеживаем клик мыши (работает еле как. не знаю почему)
         if (Input.GetMouseButtonDown(0))
         {
+            //при нажатии выключаем скрипт движения и включаем скрипт падения
             GameObject brick;
             if (brick = GameObject.FindWithTag("currentBrick"))
             {
@@ -16,9 +18,10 @@ public class TapHandler : MonoBehaviour
                 brick.transform.GetChild(0).GetComponent<BrickFall>().enabled = true;
             }
         }
-
+        // отслеживает нажатие
         foreach (Touch touch in Input.touches)
         {
+            //при нажатии выключаем скрипт движения и включаем скрипт падения
             if (touch.phase == TouchPhase.Began)
             {
                 GameObject brick;
