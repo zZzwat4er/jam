@@ -6,20 +6,21 @@ using UnityEngine;
 
 public class BrickFall : MonoBehaviour
 {
-    private static int currentLevel = 1;
-    private static int collisionCount = 0;
-    private bool isCollided;
-    private GameObject blockCreator;
+    private static int currentLevel = 1; // текущей слой
+    private static int collisionCount = 0; // сколько кирпечей было поствленно на текущем слое
+    private bool isCollided;// костыль для того чтобы кирпичь колайдил только 1 раз 
+    private GameObject blockCreator; // обект на карте на координатах которого создается кирпич
     private GameObject ground;
-    private BrickInfo info;
+    private BrickInfo info; // информация о кирпиче(пока только в каком ряду он стоит)
     
-    public float speed = 10f;
+    public float speed = 10f; // скорость падения
 
     private void Awake()
     {
-        ground = GameObject.FindWithTag("Ground");
+        ground = GameObject.FindWithTag("Ground"); // найти землю
     }
 
+    // базовые настройки переменных при активации скрипта
     private void OnEnable()
     {
         isCollided = false;
@@ -27,10 +28,9 @@ public class BrickFall : MonoBehaviour
         info.lvl = currentLevel;
         blockCreator = GameObject.FindWithTag("blockCreator");
     }
-
+    // обработка столкновений
     private void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("col");
         if(!isCollided)
         {
             // score calculation
@@ -57,17 +57,20 @@ public class BrickFall : MonoBehaviour
                     //todo get damage
                 }
             }
-
-            info.lvl = currentLevel;
+            
+            info.lvl = currentLevel;// запись слоя на котором лежит кирпич
             isCollided = true;
+            // тригер скрипта для спавна кирпича
             blockCreator.GetComponent<CreateBlock>().enabled = true;
             blockCreator.GetComponent<CreateBlock>().enabled = false;
+            // удоление данного скрипта с обекта чтобы не было двойного сробатывания при падение кирпича на кирпич
             Destroy(gameObject.GetComponent<BrickFall>());
         }
     }
 
     private void FixedUpdate()
     {
+        // просто опускание кирпича с константной скоростью    
         gameObject.transform.parent.transform.position += Vector3.down * (Time.deltaTime * speed);
     }
 }

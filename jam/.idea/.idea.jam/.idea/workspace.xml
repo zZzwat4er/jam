@@ -20,12 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e65b782e-1cbd-437f-b246-7a5582059016" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.jam/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.jam/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.jam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.jam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/curent brick.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/curent brick.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BrickFall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BrickFall.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/brick.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/brick.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/brick.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/brick.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +88,7 @@
       <option name="presentableId" value="Default" />
       <updated>1591985679555</updated>
       <workItem from="1591985697417" duration="8597000" />
-      <workItem from="1592078061156" duration="3989000" />
+      <workItem from="1592078061156" duration="5624000" />
     </task>
     <servers />
   </component>
