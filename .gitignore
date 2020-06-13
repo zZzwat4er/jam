@@ -2,7 +2,7 @@
 # Edit at https://www.gitignore.io/?templates=unity
 
 # Jetbrain Rider Cache
-jam/.idea/
+/jam/.[Ii]dea/*
 jam/Assets/Plugins/Editor/JetBrains*
 
 # Visual Studio Code
