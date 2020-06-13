@@ -16,6 +16,7 @@ jam/[Oo]bj/
 jam/[Bb]uild/
 jam/[Bb]uilds/
 jam/Assets/AssetStoreTools*
+jam/[Ll]ogs/
 
 # Visual Studio cache directory
 jam/.vs/
