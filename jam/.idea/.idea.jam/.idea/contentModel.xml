@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\valen\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\valen\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_jam.-1097548130.00" t="ExcludeRecursive" />
-    <e p="D:\jam\jam" t="IncludeRecursive">
+    <e p="C:\Users\ADMIN\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\ADMIN\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_jam.1270296635.00" t="ExcludeRecursive" />
+    <e p="C:\Users\ADMIN\Desktop\Рабочий стол\documents\UnityGames\jam\jam" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="BrickFall.cs" t="Include" />
           <e p="brickMovement.cs" t="Include" />
           <e p="CreateBlock.cs" t="Include" />
+          <e p="MainMenu.cs" t="Include" />
           <e p="TapHandler.cs" t="Include" />
         </e>
       </e>
