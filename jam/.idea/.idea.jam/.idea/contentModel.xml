@@ -11,6 +11,7 @@
           <e p="BrickInfo.cs" t="Include" />
           <e p="brickMovement.cs" t="Include" />
           <e p="CreateBlock.cs" t="Include" />
+          <e p="MainMenu.cs" t="Include" />
           <e p="Score.cs" t="Include" />
           <e p="TapHandler.cs" t="Include" />
         </e>

@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class TapHandler : MonoBehaviour
 {
+    public GameObject menu_panel; //панель главного меню
     void FixedUpdate()
     {
-        // отслеживаем клик мыши (работает еле как. не знаю почему)
+        if (menu_panel.active) return;
         if (Input.GetMouseButtonDown(0))
         {
             //при нажатии выключаем скрипт движения и включаем скрипт падения
