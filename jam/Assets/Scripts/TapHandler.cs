@@ -5,9 +5,10 @@ using UnityEngine;
 public class TapHandler : MonoBehaviour
 {
     public GameObject menu_panel; //панель главного меню
+    public GameObject gameover_panel;
     void FixedUpdate()
     {
-        if (menu_panel.active) return;
+        if (menu_panel.active || gameover_panel.active) return;//если меню включено, то игра не работает
         if (Input.GetMouseButtonDown(0))
         {
             //при нажатии выключаем скрипт движения и включаем скрипт падения

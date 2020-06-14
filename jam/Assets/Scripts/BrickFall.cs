@@ -12,7 +12,7 @@ public class BrickFall : MonoBehaviour
     private GameObject blockCreator; // обект на карте на координатах которого создается кирпич
     private GameObject ground;
     private BrickInfo info; // информация о кирпиче(пока только в каком ряду он стоит)
-
+    public int Zavershim; //панель завершения игры
     
     public float speed = 10f; // скорость падения
     // проверяем обе ли половины кирпича стоят на земле
@@ -47,7 +47,7 @@ public class BrickFall : MonoBehaviour
             // score calculation
             if (col.gameObject == ground && currentLevel == 1)
             {
-                gameObject.GetComponentInChildren<SpriteRenderer>().color = new Color(0.3f, 0.2f, 0.3f, 1);
+                gameObject.GetComponentInChildren<SpriteRenderer>().color = new Color(0.3f, 0.2f, 0.3f, 1);//изменение цвета кирпича
                 collisionCount++;
                 Score.score += collisionCount;
                                         
@@ -59,14 +59,14 @@ public class BrickFall : MonoBehaviour
                 {
                     if (col.gameObject.GetComponent<BrickInfo>().lvl == currentLevel - 1)
                     {
-                        gameObject.GetComponentInChildren<SpriteRenderer>().color = new Color(0.3f, 0.2f, 0.3f, 1);
+                        gameObject.GetComponentInChildren<SpriteRenderer>().color = new Color(0.3f, 0.2f, 0.3f, 1); //изменение цвета кирпича
                         collisionCount++;
                         Score.score += collisionCount * currentLevel;
                         
                     }
-                    else if (col.gameObject.GetComponent<BrickInfo>().lvl == currentLevel)
+                    else if (col.gameObject.GetComponent<BrickInfo>().lvl == currentLevel && isGrounded())
                     {
-                        gameObject.GetComponentInChildren<SpriteRenderer>().color = new Color(0.3f, 0.2f, 0.3f, 1);
+                        gameObject.GetComponentInChildren<SpriteRenderer>().color = new Color(0.3f, 0.2f, 0.3f, 1);//изменение цвета кирпича
                         currentLevel++;
                         collisionCount = 0;
                         Score.score += currentLevel;
@@ -74,8 +74,13 @@ public class BrickFall : MonoBehaviour
                     }
                     else
                     {
-                        //todo get damage
+                       
+                        MainMenu.Game_Over();
                     }
+                }
+                else
+                {
+                    MainMenu.Game_Over();
                 }
             }
             Debug.Log(isGrounded());
