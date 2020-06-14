@@ -15,7 +15,7 @@ public class BrickFall : MonoBehaviour
 
     
     public float speed = 10f; // скорость падения
-
+    // проверяем обе ли половины кирпича стоят на земле
     private bool isGrounded()
     {
         return transform.Find("leftSide").GetComponent<GroundCollisionCheck>().IsGrounded() && 
@@ -41,6 +41,7 @@ public class BrickFall : MonoBehaviour
     {
         if(!isCollided)
         {
+            //при косании с землей актевируем обекты крторые проверяют касание земли кирпечем
             transform.Find("leftSide").gameObject.SetActive(true);
             transform.Find("rightSide").gameObject.SetActive(true);
             // score calculation
