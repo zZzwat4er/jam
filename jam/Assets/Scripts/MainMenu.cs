@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Schema;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -24,6 +25,7 @@ public class MainMenu : MonoBehaviour
     {
         konets.SetActive(true);
         GameObject.Find("tapRegistrator").GetComponent<TapHandler>().enabled = false;
+        GameObject.Find("Panel").SetActive(false);
     }
 
     public void restart_click()
