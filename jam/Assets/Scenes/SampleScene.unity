@@ -628,7 +628,7 @@ GameObject:
   m_Component:
   - component: {fileID: 233753353}
   - component: {fileID: 233753354}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: background (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -709,7 +709,7 @@ GameObject:
   m_Component:
   - component: {fileID: 299737634}
   - component: {fileID: 299737635}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: background (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -908,7 +908,7 @@ GameObject:
   m_Component:
   - component: {fileID: 562576318}
   - component: {fileID: 562576317}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -989,7 +989,7 @@ GameObject:
   m_Component:
   - component: {fileID: 652589120}
   - component: {fileID: 652589121}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BackgroundImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1064,7 +1064,7 @@ GameObject:
   m_Component:
   - component: {fileID: 731631510}
   - component: {fileID: 731631511}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: buildings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1530,7 +1530,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1339726315}
   - component: {fileID: 1339726316}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: background (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1611,7 +1611,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1465571698}
   - component: {fileID: 1465571699}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: foreground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2194,7 +2194,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1836680625}
   - component: {fileID: 1836680626}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: background (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2351,7 +2351,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1957985446}
   - component: {fileID: 1957985447}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: background
   m_TagString: Untagged
   m_Icon: {fileID: 0}

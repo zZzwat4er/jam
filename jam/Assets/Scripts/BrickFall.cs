@@ -59,12 +59,13 @@ public class BrickFall : MonoBehaviour
             {
                 if(col.gameObject != ground)
                 {
-                    if (col.gameObject.GetComponent<BrickInfo>().lvl == currentLevel - 1)
+                    if (col.gameObject.GetComponent<BrickInfo>().lvl == currentLevel - 1 && isGrounded())
                     {
                         gameObject.GetComponentInChildren<SpriteRenderer>().sprite = brickSprtite; //изменение цвета кирпича
                         collisionCount++;
                         
                         Score.score += collisionCount * currentLevel;
+                        
                         
                     }
                     else if (col.gameObject.GetComponent<BrickInfo>().lvl == currentLevel && isGrounded())
@@ -74,7 +75,7 @@ public class BrickFall : MonoBehaviour
                         blockCreator.transform.position += new Vector3(0, 0.5f, 0);
                         collisionCount = 0;
                         Score.score += currentLevel;
-                        
+
                     }
                     else
                     {
