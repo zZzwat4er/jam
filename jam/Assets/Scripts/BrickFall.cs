@@ -39,6 +39,7 @@ public class BrickFall : MonoBehaviour
     // обработка столкновений
     private void OnTriggerEnter2D(Collider2D col)
     {
+        bool not = false;
         if(!isCollided)
         {
             //при косании с землей актевируем обекты крторые проверяют касание земли кирпечем
@@ -74,13 +75,19 @@ public class BrickFall : MonoBehaviour
                     }
                     else
                     {
-                       
-                        MainMenu.Game_Over();
+                        Score.lives--;
+                        Destroy(this.gameObject);
+                        if(Score.lives <= 0)
+                            MainMenu.Game_Over();
                     }
                 }
                 else
                 {
-                    MainMenu.Game_Over();
+                    Score.lives--;
+                    not = true;
+                    Destroy(this.gameObject);
+                    if(Score.lives <= 0)
+                        MainMenu.Game_Over();
                 }
             }
             Debug.Log(isGrounded());
@@ -88,8 +95,11 @@ public class BrickFall : MonoBehaviour
             isCollided = true;
             gameObject.layer = 8; // изменение слоя кирпича на слой Ground
             // тригер скрипта для спавна кирпича
-            blockCreator.GetComponent<CreateBlock>().enabled = true;
-            blockCreator.GetComponent<CreateBlock>().enabled = false;
+           
+                blockCreator.GetComponent<CreateBlock>().enabled = true;
+                blockCreator.GetComponent<CreateBlock>().enabled = false;
+            
+
             // удоление данного скрипта с обекта чтобы не было двойного сробатывания при падение кирпича на кирпич
             Destroy(gameObject.GetComponent<BrickFall>());
         }
