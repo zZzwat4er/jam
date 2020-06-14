@@ -12,12 +12,20 @@ public class BrickFall : MonoBehaviour
     private GameObject blockCreator; // обект на карте на координатах которого создается кирпич
     private GameObject ground;
     private BrickInfo info; // информация о кирпиче(пока только в каком ряду он стоит)
+
     
     public float speed = 10f; // скорость падения
+
+    private bool isGrounded()
+    {
+        return transform.Find("leftSide").GetComponent<GroundCollisionCheck>().IsGrounded() && 
+               transform.Find("rightSide").GetComponent<GroundCollisionCheck>().IsGrounded();
+    }
 
     private void Awake()
     {
         ground = GameObject.FindWithTag("Ground"); // найти землю
+        
     }
 
     // базовые настройки переменных при активации скрипта
@@ -33,6 +41,8 @@ public class BrickFall : MonoBehaviour
     {
         if(!isCollided)
         {
+            transform.Find("leftSide").gameObject.SetActive(true);
+            transform.Find("rightSide").gameObject.SetActive(true);
             // score calculation
             if (col.gameObject == ground && currentLevel == 1)
             {
@@ -41,25 +51,29 @@ public class BrickFall : MonoBehaviour
             }
             else
             {
-                if (col.gameObject.GetComponent<BrickInfo>().lvl == currentLevel - 1)
+                if(col.gameObject != ground)
                 {
-                    collisionCount++;
-                    Score.score += collisionCount * currentLevel;
-                }
-                else if (col.gameObject.GetComponent<BrickInfo>().lvl == currentLevel)
-                {
-                    currentLevel++;
-                    collisionCount = 0;
-                    Score.score += currentLevel;
-                }
-                else
-                {
-                    //todo get damage
+                    if (col.gameObject.GetComponent<BrickInfo>().lvl == currentLevel - 1)
+                    {
+                        collisionCount++;
+                        Score.score += collisionCount * currentLevel;
+                    }
+                    else if (col.gameObject.GetComponent<BrickInfo>().lvl == currentLevel)
+                    {
+                        currentLevel++;
+                        collisionCount = 0;
+                        Score.score += currentLevel;
+                    }
+                    else
+                    {
+                        //todo get damage
+                    }
                 }
             }
-            
+            Debug.Log(isGrounded());
             info.lvl = currentLevel;// запись слоя на котором лежит кирпич
             isCollided = true;
+            gameObject.layer = 8; // изменение слоя кирпича на слой Ground
             // тригер скрипта для спавна кирпича
             blockCreator.GetComponent<CreateBlock>().enabled = true;
             blockCreator.GetComponent<CreateBlock>().enabled = false;
