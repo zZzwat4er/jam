@@ -46,8 +46,11 @@ public class BrickFall : MonoBehaviour
             // score calculation
             if (col.gameObject == ground && currentLevel == 1)
             {
+                gameObject.GetComponentInChildren<SpriteRenderer>().color = new Color(0.3f, 0.2f, 0.3f, 1);
                 collisionCount++;
                 Score.score += collisionCount;
+                                        
+
             }
             else
             {
@@ -55,14 +58,18 @@ public class BrickFall : MonoBehaviour
                 {
                     if (col.gameObject.GetComponent<BrickInfo>().lvl == currentLevel - 1)
                     {
+                        gameObject.GetComponentInChildren<SpriteRenderer>().color = new Color(0.3f, 0.2f, 0.3f, 1);
                         collisionCount++;
                         Score.score += collisionCount * currentLevel;
+                        
                     }
                     else if (col.gameObject.GetComponent<BrickInfo>().lvl == currentLevel)
                     {
+                        gameObject.GetComponentInChildren<SpriteRenderer>().color = new Color(0.3f, 0.2f, 0.3f, 1);
                         currentLevel++;
                         collisionCount = 0;
                         Score.score += currentLevel;
+                        
                     }
                     else
                     {
