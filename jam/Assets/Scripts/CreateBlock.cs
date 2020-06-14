@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 
 public class CreateBlock : MonoBehaviour
@@ -13,6 +14,6 @@ public class CreateBlock : MonoBehaviour
     {
         var curBrick = Instantiate(brick) as GameObject;
         curBrick.transform.position = gameObject.transform.position;
-        
+        GameObject.Find("CM vcam1").GetComponent<CinemachineVirtualCamera>().Follow = curBrick.transform;
     }
 }

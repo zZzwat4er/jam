@@ -99,7 +99,9 @@ public class BrickFall : MonoBehaviour
            
                 blockCreator.GetComponent<CreateBlock>().enabled = true;
                 blockCreator.GetComponent<CreateBlock>().enabled = false;
-            
+
+                Vector3 coords = GameObject.Find("ground").GetComponent<Transform>().position;
+                GameObject.Find("ground").GetComponent<Transform>().position.Set(coords.x, coords.y-1, 0);
 
             // удоление данного скрипта с обекта чтобы не было двойного сробатывания при падение кирпича на кирпич
             Destroy(gameObject.GetComponent<BrickFall>());
