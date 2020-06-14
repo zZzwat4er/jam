@@ -371,6 +371,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab860418d80d0ec4698004a1a727715c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Zavershim: 0
+  brickSprtite: {fileID: 21300000, guid: 8b726ec3f0678f34b836f55f6035cb29, type: 3}
   speed: 5
 --- !u!114 &3673991424095088366
 MonoBehaviour:

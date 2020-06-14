@@ -6,13 +6,14 @@ using UnityEngine;
 
 public class BrickFall : MonoBehaviour
 {
-    private static int currentLevel = 1; // текущей слой
-    private static int collisionCount = 0; // сколько кирпечей было поствленно на текущем слое
+    public static int currentLevel = 1; // текущей слой
+    public static int collisionCount = 0; // сколько кирпечей было поствленно на текущем слое
     private bool isCollided;// костыль для того чтобы кирпичь колайдил только 1 раз 
     private GameObject blockCreator; // обект на карте на координатах которого создается кирпич
     private GameObject ground;
     private BrickInfo info; // информация о кирпиче(пока только в каком ряду он стоит)
     public int Zavershim; //панель завершения игры
+    [SerializeField] private Sprite brickSprtite;
     
     public float speed = 10f; // скорость падения
     // проверяем обе ли половины кирпича стоят на земле
@@ -48,7 +49,7 @@ public class BrickFall : MonoBehaviour
             // score calculation
             if (col.gameObject == ground && currentLevel == 1)
             {
-                gameObject.GetComponentInChildren<SpriteRenderer>().color = new Color(0.3f, 0.2f, 0.3f, 1);//изменение цвета кирпича
+                gameObject.GetComponentInChildren<SpriteRenderer>().sprite = brickSprtite;
                 collisionCount++;
                 Score.score += collisionCount;
                                         
@@ -60,14 +61,14 @@ public class BrickFall : MonoBehaviour
                 {
                     if (col.gameObject.GetComponent<BrickInfo>().lvl == currentLevel - 1)
                     {
-                        gameObject.GetComponentInChildren<SpriteRenderer>().color = new Color(0.3f, 0.2f, 0.3f, 1); //изменение цвета кирпича
+                        gameObject.GetComponentInChildren<SpriteRenderer>().sprite = brickSprtite; //изменение цвета кирпича
                         collisionCount++;
                         Score.score += collisionCount * currentLevel;
                         
                     }
                     else if (col.gameObject.GetComponent<BrickInfo>().lvl == currentLevel && isGrounded())
                     {
-                        gameObject.GetComponentInChildren<SpriteRenderer>().color = new Color(0.3f, 0.2f, 0.3f, 1);//изменение цвета кирпича
+                        gameObject.GetComponentInChildren<SpriteRenderer>().sprite = brickSprtite;//изменение цвета кирпича
                         currentLevel++;
                         collisionCount = 0;
                         Score.score += currentLevel;

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
@@ -22,6 +23,15 @@ public class MainMenu : MonoBehaviour
     public static void Game_Over()
     {
         konets.SetActive(true);
-      
+        GameObject.Find("tapRegistrator").GetComponent<TapHandler>().enabled = false;
+    }
+
+    public void restart_click()
+    {
+        SceneManager.LoadScene( SceneManager.GetActiveScene().buildIndex);
+        Score.lives = 5;
+        Score.score = 0;
+        BrickFall.currentLevel = 1;
+        BrickFall.collisionCount = 0;
     }
 }
