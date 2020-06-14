@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class BrickInfo : MonoBehaviour
 {
-    [SerializeField] public int lvl;
+    [SerializeField] public int lvl; // номер слоя 
 }

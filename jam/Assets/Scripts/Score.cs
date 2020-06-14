@@ -4,8 +4,8 @@ using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
-    public static int score;
-    public Text text;
+    public static int score; // current score
+    public Text text; // text where we put score
 
 
     private void Start()
@@ -15,6 +15,6 @@ public class Score : MonoBehaviour
 
     private void Update()
     {
-        text.text = "Score: " + score;
+        text.text = "Score: " + score; // print score
     }
 }

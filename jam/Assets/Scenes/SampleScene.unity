@@ -652,7 +652,7 @@ GameObject:
   - component: {fileID: 1739294375}
   - component: {fileID: 1739294374}
   - component: {fileID: 1739294376}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ground
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -935,6 +935,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3437506873456429398, guid: ba93464dde1fbdd4e80264da568f3362,
+        type: 3}
+      propertyPath: isGrounded
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5527829338284806263, guid: ba93464dde1fbdd4e80264da568f3362,
         type: 3}
       propertyPath: m_Name
